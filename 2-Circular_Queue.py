@@ -10,24 +10,24 @@ class MyCircleQueue:
         
     def enQueue(self,item):
         if self.isFull():
-            print( "List is FULL",self.queue)
+            return "List is full."
             
         else:            
             self.rear=(self.rear+1)%self.maxsize
             self.queue[self.rear]=item
             self.size+=1
-            print("Ekleme yapıldı:",item,"\nYeni Liste:",self.queue)
+            return
             
     def deQueue(self):
         if self.isEmpty():
             self.rear = self.front= -1
-            print("Hacı Queue Boş",self.rear,self.front)
+            return "Queue Empty."
         
         else:           
             self.front = (self.front + 1) % self.maxsize
             self.queue[self.front]=None
             self.size-=1
-            print("Silme yapıldı:","front işaretçi:",self.front,"Yeni Liste:",self.queue)
+            return
             
     
     def isFull(self):
@@ -40,25 +40,26 @@ class MyCircleQueue:
     def isEmpty(self):
         return self.size==0
     
-# c=MyCircleQueue(5)
-# c.enQueue(1)
+c=MyCircleQueue(5)
+c.enQueue(1)
 
-# c.enQueue(2)
+c.enQueue(2)
 
-# c.enQueue(3)
-# c.enQueue(4)
-# c.enQueue(5)
+c.enQueue(3)
+c.enQueue(4)
+c.enQueue(5)
+c.display()
+c.deQueue()
+c.deQueue()
+c.deQueue()
+c.deQueue()
 
-# c.deQueue()
-# c.deQueue()
-# c.deQueue()
-# c.deQueue()
-
-# c.enQueue(6)
-# c.enQueue(7)
-# c.enQueue(8)
-# c.deQueue()
-# c.deQueue()
+c.enQueue(6)
+c.enQueue(7)
+c.enQueue(8)
+c.deQueue()
+c.deQueue()
+c.display()
 
 
 
