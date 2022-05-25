@@ -1,11 +1,11 @@
 
-"""# * Heap Data Structure Array ve Ağaç olarak kodlanabilir.
+"""
+#*  Max-Heap data structure in Python
+
+# * Heap Data Structure Array ve Ağaç olarak kodlanabilir.
 # * MAX VE MIN HEAP OLARAK IKIYE AYRILIR.
 
 # * YUKARIDAN AŞAĞI VE SOLDAN SAĞA DOLDURULUR. BÜYÜK VE KÜÇÜK OLARAK İKİYE AYRILIR.
-# * PARENT NODE CHILD NODDAN TİPİNE GÖRE KÜÇÜK VEYA BÜYÜKTÜR YA DA EŞİTTİR.
-
-#*  Mix-Heap data structure in Python
 
 # * Priority Queue oluşturmak için idealdir. 
 @author:Metehan Özcan
@@ -55,13 +55,13 @@ class minHeap:
     def Right(self, index):
         return self.data[self.getRightIndex(index)]
 
-    def IsEmpty(self):
+    def IsEmpty(self): #* Boş Mu?
         return self.size == 0
 
-    def IsFull(self):
+    def IsFull(self): #* Dolu mu?
         return self.size == self.data_max
 
-    def swap(self, index1, index2):
+    def swap(self, index1, index2): #* Değişim Fonksiyonu Heap düzenlenirken kullanırız. İstediğimiz indeksleri birbiri arasında değiştirir.
         self.data[index1], self.data[index2] = self.data[index2], self.data[index1]
         
     def insert(self,item):
@@ -72,7 +72,7 @@ class minHeap:
         self.data[self.size]=item #* Listeye Ekleme yaparken, Size pointerının gösterdiği boş yere ekleme yapılır.
         self.size+=1 #* Size bir artırılır.
         
-        self.heapifyUp(self.size-1) #* Son eklenen eleman için ağaç düzenleme fonksiyonu çağırılır.
+        self.heapifyUp(self.size-1) #* Son eklenen eleman için heap düzenleme fonksiyonu çağırılır.
         
         
     def Remove(self):
@@ -93,7 +93,7 @@ class minHeap:
     def heapifyUp(self,index):
         #* Bu İşlem Parent İle alakalıdır.
         #* Mümkünse Parent değişimi yapılır.
-        #* Ağaç düzenlenir. Her zaman Yukarıdan aşağı , Soldan Sağa doğru dolar.
+        #* Heap düzenlenir. Her zaman Yukarıdan aşağı , Soldan Sağa doğru dolar.
         if self.hasParent(index) and self.Parent(index)> self.data[index]  : #* İndeksin Parentı var mı-> Bakılır ve Parent >= İndeksten büyük mü Kontrol edilir.
             self.swap(index,self.getParentIndex(index)) #* Eğer Parent, Mevcut indeksten büyükse değişim yapılır. ( MİN HEAP İÇİN) data içinde değişim yapılır.
             self.heapifyUp(self.getParentIndex(index)) #* İndeks değerimiz hala aynı sadece eski data[index] ve data[parent]ının yeri değiştiği için şimdi parentı konrol etmek için tekrar çağırdık.
