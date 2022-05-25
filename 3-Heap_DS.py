@@ -1,7 +1,9 @@
 
 """
-#*  Max-Heap data structure in Python
-
+#*  Mix-Heap data structure in Python
+#* Eğer Max- Heap istiyorsanız;
+# heapifyUp ve heapifydown metodlarında tüm küçük veya büyük işaretleri tersine değiştirin. 
+# Örn: Min için varsayılan işaret '>'  Max için '<' olacaktır.
 # * Heap Data Structure Array ve Ağaç olarak kodlanabilir.
 # * MAX VE MIN HEAP OLARAK IKIYE AYRILIR.
 
