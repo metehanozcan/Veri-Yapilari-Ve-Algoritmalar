@@ -90,10 +90,10 @@ class linkedlist:
             curr = curr.next
             count += 1
 
-        temp = curr.next
-        #* Logic Here, We have created a Node for the next of the index pointing to the Current Pointer.
+        #temp = curr.next
+        #* Logic Here, We have created a Node for the next index, that pointed by the Current Pointer.
         #* temp = curr.next was the previous next element of the current node. Simply, we merge it.
-        curr.next = node(data, temp)
+        curr.next = node(data, curr.next)
         self.size += 1
         return
 
@@ -190,6 +190,9 @@ ll = linkedlist()
 ll.prepend(1)
 ll.append(3)
 ll.insert(1,2)
+ll.insert(2,2)
+ll.insert(3,2)
+ll.insert(5,2)
 ll.print()
 ll.pop(1)
 print(ll.get(1))
