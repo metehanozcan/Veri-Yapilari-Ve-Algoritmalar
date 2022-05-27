@@ -1,4 +1,4 @@
-
+ 
 # * Simple Linked List Implementation 
 
 
@@ -155,6 +155,7 @@ class linkedlist:
                 
             if curr.data > temp.data:                
                 temp.data, curr.data = curr.data, temp.data
+                
                 if curr.data > temp.next.data:                    
                     temp.next.data, curr.data = curr.data , temp.next.data 
             
