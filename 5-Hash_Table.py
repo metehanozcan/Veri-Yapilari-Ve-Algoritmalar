@@ -92,7 +92,7 @@ class MyHashMap:
                 node.next=node.next.next
                 return
             node=node.next
-    def c(self):
+    def c(self): #*prints data
         print(self.data)
 a=MyHashMap()
 a.put(3,25)
