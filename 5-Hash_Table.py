@@ -59,7 +59,7 @@ class MyHashMap:
         self.mult=5381
         self.data=[None]*self.size
         
-    def hash(self,key): #Most important part
+    def hash(self,key): #Most important part - simple hashing alg.
         return key * self.mult % self.size
 
         
