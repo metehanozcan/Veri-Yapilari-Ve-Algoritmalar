@@ -1,6 +1,6 @@
 """
     Tree Traversal Implementation
-    Functional Type
+    Functional Type--
 
 
     """
@@ -108,6 +108,14 @@ def postorder(root):
     return 'End'
 
 
+
+
+
+
+
+
+
+
 def postorder_iter(root):
     if root is None:
         return
@@ -161,13 +169,13 @@ def reverse_levelorder_traversal(root):
 
 
 root = None
-root = insert(root, 1)
+root = insert(root, 5)
 root = insert(root, 2)
 root = insert(root, 3)
 root = insert(root, 4)
-root = insert(root, 5)
+root = insert(root, 7)
 root = insert(root, 6)
-root = delete(root, 5)
+root = delete(root, 8)
 # root = Node(2)
 # root.left = Node(1)
 # root.right = Node(3)
