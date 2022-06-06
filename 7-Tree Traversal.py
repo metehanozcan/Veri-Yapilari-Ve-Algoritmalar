@@ -108,14 +108,6 @@ def postorder(root):
     return 'End'
 
 
-
-
-
-
-
-
-
-
 def postorder_iter(root):
     if root is None:
         return
