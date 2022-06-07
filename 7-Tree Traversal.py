@@ -26,7 +26,7 @@ def insert(root, data):
     return root
 
 
-def findmin(self, root):
+def findmin(root):
     current = root
     while current.left:
         current = current.left
@@ -36,7 +36,7 @@ def findmin(self, root):
 def delete(root, data):
     if not root:
         return None
-    elif data < root.data:
+    elif data < root.data: #* If 
         root.left = delete(root.left, data)
     elif data > root.data:
         root.right = delete(root.right, data)
