@@ -10,3 +10,4 @@ class Graph:
     def __init__(self,vertex):
         self.V=vertex
         self.graph =defaultdict(list)
+        #*CRUD
