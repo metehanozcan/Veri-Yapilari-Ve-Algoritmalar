@@ -11,3 +11,4 @@ class Graph:
         self.V=vertex
         self.graph =defaultdict(list)
         #*CRUD
+        d={1,2,3,4,5}
