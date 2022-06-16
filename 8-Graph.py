@@ -6,7 +6,6 @@ __author__="Metehan Özcan"
 
 
 
-import re
 
 
 class Graph(object):
