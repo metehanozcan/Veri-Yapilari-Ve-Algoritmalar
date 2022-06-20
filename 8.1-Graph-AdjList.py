@@ -107,6 +107,7 @@ def get_test_graph_1():
     dg.add_edge(5, 8)
     dg.add_edge(6, 5)
     dg.add_edge(7, 5)
+    dg.add_edge(8, 7)
     
 
     return dg
