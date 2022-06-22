@@ -1,5 +1,4 @@
 import queue
-import copy
 
 class DirectedGraph(object):
     """
