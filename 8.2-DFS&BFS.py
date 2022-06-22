@@ -77,7 +77,7 @@ def bfsnumsIslands(matrix):
         visit.add((r,c))
         q.append((r,c))
         while q:
-            row,col= q.pop() #* If we want to solve it dfs, we can simply change popleft to pop.
+            row,col= q.pop() #* If we want to solve it with dfs, we can simply change popleft to pop.
             print(row,col)
             directions=((1,0),(-1,0),(0,1),(0,-1))
             for dr, dc in directions:
