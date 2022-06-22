@@ -57,9 +57,9 @@ def bfs(matrix):
             # Add in question-specific checks, where relevant.
             queue.append((next_i, next_j))
 
-  for i in range(rows):
-    for j in range(cols):
-      traverse(i, j)        
+    for i in range(rows):
+        for j in range(cols):
+            traverse(i, j)        
         
 
 
