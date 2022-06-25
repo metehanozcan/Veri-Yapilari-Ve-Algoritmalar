@@ -126,8 +126,7 @@ def dfsnumIslands(matrix):
                 dfs(r,c)
                 islands+=1
     return islands
-                    
-
+print(dfsnumIslands(graph)) #* returns the number of islands
 
 
     
