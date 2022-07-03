@@ -72,11 +72,6 @@ def mergeSort(array):
             k += 1
 
 
-# Print the array
-def printList(array):
-    for i in range(len(array)):
-        print(array[i], end=" ")
-    print()
 
 
 # Driver program
